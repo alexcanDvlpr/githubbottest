@@ -15,5 +15,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
+          echo "Intalling..."
           npm install
+          echo "Executing..."
           node src/index.js
