@@ -9,10 +9,10 @@ jobs:
   pr-commenter:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Run Bot
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        node bot.js
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run Bot
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          node bot.js

@@ -18,7 +18,7 @@ async function main() {
     // Iterate over each pull request
     for (let pullRequest of pullRequests) {
         // Check if the pull request is open and if the head branch is the one you want to check
-        if (pullRequest.state === "open" && pullRequest.head.ref === "main") {
+        if (pullRequest.state === "open" && pullRequest.head.ref === "master") {
             // Get the list of commits for the pull request
             const { data: commits } = await octokit.pulls.listCommits({
                 repo: repoName,
